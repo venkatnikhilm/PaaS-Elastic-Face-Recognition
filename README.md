@@ -1,4 +1,4 @@
-# Video Splitting and Face Recognition Pipeline
+# PaaS Elastic Face Recognition
 
 ## Overview
 
