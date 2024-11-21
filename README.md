@@ -43,7 +43,8 @@ The pipeline leverages the following AWS services:
 
 ---
 
-## Project Structure
+# Project Structure
+
 project/
 │
 ├── video_splitting_lambda/
@@ -56,8 +57,13 @@ project/
 │   ├── requirements.txt        # Dependencies for face recognition
 │   ├── requirements2.txt       # Secondary dependency file for PyTorch
 │   ├── Dockerfile              # Dockerfile for Lambda deployment
+│   ├── entry.sh                # Entry point script for Docker container
 │   └── data.pt                 # Pre-trained embeddings file
-
+│
+├── s3_buckets/
+│   ├── input/                  # S3 bucket for input videos
+│   ├── stage-1/                # S3 bucket for intermediate frames
+│   └── output/                 # S3 bucket for recognition results
 ---
 
 ## Deployment Steps
