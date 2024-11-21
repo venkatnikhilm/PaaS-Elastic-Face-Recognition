@@ -1,0 +1,5 @@
+Command for grading script
+python3 grading.py --access_key <aws access key> --secret_key <secret_key> --asu_id 1228911985
+
+Command for workload generator script
+python3 workload_generator.py --access_key <aws_access_key> --secret_key <secret_key> --asu_id 1228911985 --testcase_folder "test_case_1/"
