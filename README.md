@@ -46,25 +46,25 @@ The pipeline leverages the following AWS services:
 # Project Structure
 
 project/
-│
 ├── video_splitting_lambda/
-│   ├── video_splitting.py      # Lambda code for splitting videos
-│   ├── requirements.txt        # Dependencies for video splitting
-│   └── ffmpeg_layer/           # Custom ffmpeg layer (if used)
+│   ├── video_splitting.py        # Lambda function for splitting videos
+│   ├── requirements.txt        # Dependencies required for video splitting
+│   └── ffmpeg_layer/ (optional)  # Custom ffmpeg layer (if used)
 │
 ├── face_recognition_lambda/
-│   ├── face-rec.py             # Lambda code for face recognition
-│   ├── requirements.txt        # Dependencies for face recognition
-│   ├── requirements2.txt       # Secondary dependency file for PyTorch
-│   ├── Dockerfile              # Dockerfile for Lambda deployment
-│   ├── entry.sh                # Entry point script for Docker container
-│   └── data.pt                 # Pre-trained embeddings file
+│   ├── face-rec.py                # Lambda function for face recognition
+│   ├── requirements.txt          # Dependencies required for face recognition
+│   ├── requirements2.txt         # Secondary dependency file (likely for PyTorch)
+│   ├── Dockerfile                # Dockerfile for deploying the Lambda function
+│   ├── entry.sh                   # Entry point script for the Docker container
+│   └── data.pt                    # Pre-trained embeddings file for face recognition
 │
 ├── s3_buckets/
-│   ├── input/                  # S3 bucket for input videos
-│   ├── stage-1/                # S3 bucket for intermediate frames
-│   └── output/                 # S3 bucket for recognition results
----
+│   ├── input/                    # S3 bucket for storing input videos
+│   ├── stage-1/                   # S3 bucket for storing intermediate frames (results of video splitting)
+│   └── output/                   # S3 bucket for storing face recognition results
+│
+└── README.md                     # Project 
 
 ## Deployment Steps
 
